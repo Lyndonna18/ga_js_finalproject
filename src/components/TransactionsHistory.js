@@ -1,21 +1,24 @@
 function TransactionHistory(props){
+  
     return(
-        <>
-        <p> TransactionHistory</p>
-        <ul className="Transactions">
+        <div >
+          <div className="Transactions">
+        <h3> Transaction History</h3>
+        <ul >
         {props.actualListProp.map((item, index) =>{
         return(
           <li key={index}>
               
-            {item.name}
-            {item.amt}
-            <span onClick={(evt) => {props.removeButtonProp(evt, index)}}>🅧
-              </span> 
+            <p>{item.name} ${item.amt}</p>
+
+            {/* <span onClick={(evt) => {props.removeButtonProp(evt, index)}}>🅧
+              </span>  */}
             </li>
         )
       })}
         </ul>
-        </>
+        </div>
+        </div>
     )
 }
 

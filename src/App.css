@@ -1,12 +1,31 @@
+.Body{
+    background-color: brown;
+}
+h3{
+    text-align:center;
+}
 .NewExpense{
-
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 1em;
 }
 .Transactions{
-
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .Line{
     
 }
 li{
     list-style:none;
+    text-align:center;
+}
+.Homepage{
+    text-align:center;
 }
