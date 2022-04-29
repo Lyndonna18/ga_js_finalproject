@@ -2,9 +2,8 @@ Task Manager!
 
 For my final project, I will create an expense tracker for users to keep track of their expenses.
 There needs to be an input field for the name of the expense, then a drop down area for the category, and means to add a category that is not supplied Categories include: food, education, entertainment, bills, and travel etc.
-Also a calendar/date functionality to add more detail to the tracker.
-Lastly the funcationality to submit a dollar amount for the goal for the tracker and a alert when the goal is exceeded.
-Stretch goal: Make it downloable?
+Lastly the funcationality to submit a dollar amount for the goal for the tracker 
+Stretch goal: Make it downloable? An alert when the goal is exceeded.
 
 
 Overview: summarize the goals of your app, and describe the problem your app is built to solve.

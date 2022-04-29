@@ -7,7 +7,7 @@ function TransactionHistory(props){
         return(
           <li key={index}>
               
-            {console.log(item.name)}
+            {item.name}
             {item.amt}
             <span onClick={(evt) => {props.removeButtonProp(evt, index)}}>🅧
               </span> 
