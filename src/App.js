@@ -46,6 +46,11 @@ function App() {
 
   const removeButton= (item, index) => {
     setActualList(actualList.filter((task) => actualList.indexOf(task) !== index))
+    let sum;
+    actualList.forEach(charge => {
+      sum= sum+ charge.amt;
+    });
+    setTotal(sum)
   }
 
   return (

@@ -8,11 +8,10 @@ function TransactionHistory(props){
         {props.actualListProp.map((item, index) =>{
         return(
           <li key={index}>
-              
-            <p>{item.name} ${item.amt}</p>
-
-            {/* <span onClick={(evt) => {props.removeButtonProp(evt, index)}}>🅧
-              </span>  */}
+            <p>{item.name} ${item.amt}
+              <span onClick={(evt) => {props.removeButtonProp(evt, index)}}>🅧
+              </span> 
+              </p>
             </li>
         )
       })}
