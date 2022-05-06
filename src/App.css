@@ -1,5 +1,5 @@
-.Body{
-    background-color: #964B00;
+body{
+    background-color: #1a60a5;
 }
 h3{
     text-align:center;
@@ -19,13 +19,15 @@ h3{
     align-items: center;
     flex-direction: column;
 }
-.Line{
-    
+.List{
+    /* margin: 2px */
+    word-spacing: 10px;
 }
 li{
-    list-style:none;
+    list-style: none;
     text-align:center;
 }
+
 .Homepage{
     text-align:center;
 }

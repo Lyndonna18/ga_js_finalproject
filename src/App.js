@@ -5,6 +5,7 @@ import TransactionHistory from './components/TransactionsHistory';
 import { Routes, Route } from 'react-router-dom';
 import NewExpense from './components/NewExpense';
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 function App() {
   const[trackerName, setTrackerName] = useState("");
@@ -17,6 +18,7 @@ function App() {
   const[actualList, setActualList] = useState([]);
   const [amount, setAmount] =useState("")
   const [total, setTotal] =useState(0)
+  const [ hasClicked, setHasClicked] =useState(false)
 
   const addToList = () => {
     // console.log(expense)
@@ -35,7 +37,7 @@ function App() {
   }
   useEffect(addTotal, [actualList]) 
 
-  const clickButton = () => {
+  const clickSubmitInfoButton = () => {
     setTrackerName(firstName)
     setTrackerLim(spendLim)
     }
@@ -46,6 +48,7 @@ function App() {
 
   const removeButton= (item, index) => {
     setActualList(actualList.filter((task) => actualList.indexOf(task) !== index))
+
     let sum;
     actualList.forEach(charge => {
       sum= sum+ charge.amt;
@@ -53,37 +56,59 @@ function App() {
     setTotal(sum)
   }
 
+  const submitEditButton =(item, index) =>{
+    // console.log("Edit this item")
+    // Show edit form
+    // const newList[index] = {name: item.name, amt: item.amt}
+    // setActualList(newList)
+  console.log(item.amt)
+  console.log(item.name)
+  console.log(index)
+  }
+
+  
+
   return (
-    <div className="Body">
+    <div className="All">
+      <Routes>
+      <Route className="Home" path="/" element={
       <Homepage trackerLimProp={trackerLim} setTrackerLimProp={setTrackerLim} 
-      clickSubmitButtonFuncProp={clickButton} 
+      clickSubmitButtonFuncProp={clickSubmitInfoButton} 
       trackerNameProp={trackerName} setTrackerNameProp={setTrackerName} 
       firstNameProp={firstName} setFirstNameProp={setFirstName} 
       lastNameProp={lastName} setLastNameProp={setLastName} 
       emailProp={email} setEmailProp={setEmail} 
-      spendLimProp={spendLim} setSpendLimProp={setSpendLim}/>
+      spendLimProp={spendLim} setSpendLimProp={setSpendLim}/>}/>
 
-      
-      {/* <Route path="/submit" element={<ExpensePage firstNameprop={setFirstName} spendLimprop={setSpendLim}/>}/> */}
-
-      <div className="container">
-        <NewExpense expenseProp={expense} setExpenseProp={setExpense} 
+    
+      <Route className="container" path="/submit" element={<>
+        <NewExpense 
+        trackerNameProp={trackerName}
+        expenseProp={expense} setExpenseProp={setExpense} 
         actualListProps={actualList} setActualListProp={setActualList}
         addToListFuncProp={addToList} 
-        amountProp={amount} setAmountProp={setAmount}/>
+        amountProp={amount} setAmountProp={setAmount}/> 
 
-        <TransactionHistory 
-        // addAmountsFuncProp={addAmounts}
+        <TransactionHistory
+        
         totalProp={total} setTotalProp={setTotal}
         actualListProp={actualList} setActualListProp={setActualList}
         amountProp={amount} setAmountProp={setAmount} 
-        removeButtonProp={removeButton}/>
-
+        removeButtonProp={removeButton}
+        setHasClickedProp={setHasClicked}
+        hasClickedProp={hasClicked}
+        expenseProp={expense} setExpenseProp={setExpense} 
+        actualListProps={actualList} setActualListProp={setActualList}
+        addToListFuncProp={addToList} 
+        amountProp={amount} setAmountProp={setAmount}/>
+        </>
+        }/>
+        </Routes>
         
-      </div>
+      
       <h4>Your total expenses is now ${total}</h4>
       <h4>{trackerName}, your Spending Limit is: ${(trackerLim -  total)}</h4>
-      
+    
     </div>
   );
 }
