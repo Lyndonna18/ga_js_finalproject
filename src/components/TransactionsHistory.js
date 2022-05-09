@@ -69,7 +69,7 @@ function TransactionHistory(props){
               )})}
                 <button onClick={() => {
                   clearAllFunc()
-                }}><Link to="/">CLEAR ALL</Link></button>
+                }}><Link to="/">CLEAR ALL Expenses</Link></button>
           </ul>
               :
               <div>
@@ -104,7 +104,7 @@ function TransactionHistory(props){
             
                 <button onClick={() => {
                   clearAllFunc()
-                }}><Link to="/">CLEAR ALL</Link></button>
+                }}><Link to="/">CLEAR ALL Expenses</Link></button>
             </div>
 
             }
