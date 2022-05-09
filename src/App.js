@@ -77,7 +77,6 @@ function App() {
       trackerNameProp={trackerName} setTrackerNameProp={setTrackerName} 
       firstNameProp={firstName} setFirstNameProp={setFirstName} 
       lastNameProp={lastName} setLastNameProp={setLastName} 
-      emailProp={email} setEmailProp={setEmail} 
       spendLimProp={spendLim} setSpendLimProp={setSpendLim}/>}/>
 
     
@@ -85,22 +84,19 @@ function App() {
         <NewExpense 
         trackerNameProp={trackerName}
         expenseProp={expense} setExpenseProp={setExpense} 
-        actualListProps={actualList} setActualListProp={setActualList}
+        actualListProp={actualList} setActualListProp={setActualList}
         addToListFuncProp={addToList} 
         amountProp={amount} setAmountProp={setAmount}/> 
 
         <TransactionHistory
-        
-        totalProp={total} setTotalProp={setTotal}
-        actualListProp={actualList} setActualListProp={setActualList}
-        amountProp={amount} setAmountProp={setAmount} 
-        removeButtonProp={removeButton}
+        firstNameProp={firstName} setFirstNameProp={setFirstName} lastNameProp={lastName} setLastNameProp={setLastName} 
+        totalProp={total} setTotalProp={setTotal}removeButtonProp={removeButton}
         setHasClickedProp={setHasClicked}
         hasClickedProp={hasClicked}
         expenseProp={expense} setExpenseProp={setExpense} 
-        actualListProps={actualList} setActualListProp={setActualList}
+        actualListProp={actualList} setActualListProp={setActualList}
         addToListFuncProp={addToList} 
-        amountProp={amount} setAmountProp={setAmount}/>
+        amountProp={amount} setAmountProp={setAmount} spendLimProp={spendLim} setSpendLimProp={setSpendLim} trackerLimProp={trackerLim} setTrackerLimProp={setTrackerLim} trackerNameProp={trackerName} setTrackerNameProp={setTrackerName}/>
         </>
         }/>
         </Routes>
