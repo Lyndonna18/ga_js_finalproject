@@ -1,14 +1,12 @@
 Task Manager!
 
-For my final project, I will create an expense tracker for users to keep track of their expenses.
-There needs to be an input field for the name of the expense, then a drop down area for the category, and means to add a category that is not supplied Categories include: food, education, entertainment, bills, and travel etc.
-Lastly the funcationality to submit a dollar amount for the goal for the tracker 
-Stretch goal: Make it downloable? An alert when the goal is exceeded.
+For my final project, I will create an app for users to keep track of their expenses.
+The users can input a spending limit and their name to personalize the app.
+There needs to be an input field for the name of the expense, and the dollar amount for the expense. 
+
+Once they have listed the expenses they have the option to edit individual line items to make changes to their overall transaction history. They will also have the option to clear all of the inputs and start over from scratch.
 
 
-Overview: summarize the goals of your app, and describe the problem your app is built to solve.
-Wireframes: Use a tool like https://awwapp.com/, https://www.mockflow.com/, or good ol zoom whiteboard to create wireframes for your project. Take a screenshot and link to the images in your readme. Your wireframes should walk the reader through the screen states, and should include short descriptions of each screen. It's a good idea to give your wireframes labels (like 1, 2, 3 etc), and to indicate which screens transitions to which other screens.
-User stories: a series of statements in the form of "When I {do X}, {Y happens}." These statements should encompass the whole functionality of your app.
-React components tree: Diagram out your component hierarchy, indicating which components are parents/children of which others. Indicate which components hold which pieces of state, and which props are passed to each child.
-MVP checklist: A list of all the functionalities that will constitute the bare minimum version of your app. Note that this list should be sized so that you can complete it by Wednesday, leaving Thursday and Friday to tackle bonus goals.
-Bonus goals: A list of awesome bonus goals you will work on after completing your MVP.
+User Stories:
+The user opens the app and inputs their name and spending limit/budget. Upon submitting that information, they are taken to the expense tracker which lets them input as many expenses as they want. The total amount of expenses and the amount of money they have left in the budget is tabulated. 
+If the user sees an error in an expense they can choose to remove the expense altogether, or individually edit that line items and submit the edit. The Clear All button will clear all of the inputs and take the user back to the homepage to stat over again!
