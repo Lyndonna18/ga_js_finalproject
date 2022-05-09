@@ -99,12 +99,7 @@ function App() {
         amountProp={amount} setAmountProp={setAmount} spendLimProp={spendLim} setSpendLimProp={setSpendLim} trackerLimProp={trackerLim} setTrackerLimProp={setTrackerLim} trackerNameProp={trackerName} setTrackerNameProp={setTrackerName}/>
         </>
         }/>
-        </Routes>
-        
-      
-      <h4>Your total expenses is now ${total}</h4>
-      <h4>{trackerName}, your Spending Limit is: ${(trackerLim -  total)}</h4>
-    
+        </Routes>   
     </div>
   );
 }

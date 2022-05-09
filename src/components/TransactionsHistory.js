@@ -111,6 +111,8 @@ function TransactionHistory(props){
           
             
         </div>
+        <h4>Your total expenses is now ${props.totalProp}</h4>
+        <h4>{props.trackerNameProp}, your Spending Limit is: ${(props.trackerLimProp - props.totalProp)}</h4>
         </div>
     )
 }
